@@ -1,0 +1,999 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    background-color: rgb(209, 189, 158);
+    color: rgb(30,20,5);
+    width:100%;
+    height:100vh;
+}
+
+.dontMove{
+    overflow: hidden;
+}
+
+.move{
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.mainMenu {
+    background-color:  rgb(209, 189, 158);
+    width:15%;
+    height:70%;
+    float:left;
+    position: relative;
+}
+
+
+.bottomMenu {
+    position: absolute;
+    background-color:  rgb(209, 189, 158);
+    width:15%;
+    height:40%;
+    left:0%;
+    top:80%;
+    transform: translate(0%,-50%);
+    float:left;
+    display: block;
+}
+
+.menuImage{
+    width:40px;
+    height:30px;
+    color:white;
+    float:right;
+    margin:25px 12px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+.menuLine{
+    width:100%;
+    height:15%;
+    background-color:rgb(234, 232, 220);
+    /* display: block; */
+    border-radius: 1px;
+    display: none;
+}
+
+.box1{
+    width:75%;
+    margin: -20px auto;
+    height:50%;
+    font-size: 18px;
+    color:  rgb(234,232,220);
+    display: block;
+}
+
+.menuBox{
+    width:100vw;
+    height:100vh;
+    background-color: rgb(232,90,80);
+    color: rgb(234, 232, 220);
+    font-size: 14px;
+    align-content: center; 
+    display:none; 
+}
+
+.insideBox{
+    width:100%;
+    height:100%;
+    padding-top:60%;
+    text-align: center;
+    display:none;
+}
+
+.box2{
+    width:75%;
+    height:40%;
+    margin:24% auto;
+    font-size: 16px;
+    color:  rgb(234,232,220);
+}
+
+.smallText{
+    font-size: 14px;   
+}
+
+.box3{
+    width:75%;
+    margin:auto;
+    font-size: 16px;
+    color:  rgb(234,232,220);
+}
+
+.socialMedia{
+    display: flex;
+    justify-content:flex-start;
+    padding-top: 5px;
+}
+
+.imgContain{
+    width:20%;
+    height:20%;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.imgContain img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+#seperatingLine{
+    border-bottom: 1px solid rgba(234, 232, 220,0.5);
+    border-radius: 1px;
+    margin-top: 20px;
+}
+
+.links{
+    display: block;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.logoImage{
+    width:75%;
+    height:20%;
+    margin: 15% auto;
+}
+
+.logoImage img{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+.stepsMenu{
+    background-color: rgb(234, 232, 220);
+    width: 85%;
+    height: 15%;
+    float: left;
+    position: relative;
+    
+}
+
+.steps{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height:40%;
+    width:95%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dotLine{
+    position: absolute;
+    top:50%;
+    left:40%;
+    transform: translate(-40%,-50%);
+    width:90%;
+    display: inline-block;
+    border-top: 1px solid rgb(232,90,80);
+    margin-left:2.5%;
+}
+
+.stepBox{
+    width:10%;
+    height: 70%;
+    border:3px solid  rgb(232,90,80);
+    background-color:  rgb(234, 232, 220);
+    display: inline-block;
+    position: relative;
+    color:  rgb(232,90,80);
+}
+
+.active{
+    background-color: rgb(232,90,80);
+    color: rgb(234, 232, 220);
+}
+
+.text{
+    font-weight: bold;
+    font-size:14px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.bottomMenu2{
+    display: none;
+}
+
+.phoneButton{
+    display: none;
+}
+
+.fillBox{
+    background-color: rgb(232,90,80);
+}
+
+.imageArea{
+    background-color: rgb(255, 255, 255);
+    width:60%;
+    height:85%;
+    float:left;
+    display:flex;
+    justify-content: center; 
+    align-items:center;
+}
+
+.imageHere{
+    background-color:  rgb(236, 233, 230);
+    width:92%;
+    height:90%;
+    position: relative;
+}
+
+.putImageHere{
+    background-color: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-0%,-0%);
+    width:100%;
+    height:100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loadImage{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+}
+
+.loadImage img{
+    height: 100%;
+    width:100%;
+    display: block;
+}
+
+.putImageHere.active{
+    background-color: darkorange;
+}
+
+.imagePlace{
+    width:100%;
+    height:100%;
+    background-color: darkmagenta;
+}
+
+.dropPromt{
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0, 0.1);
+    display: block;
+}
+
+.fileChoose{
+    padding:10px 20px;
+    margin-top: 10px;
+    background-color: rgb(232,90,80);
+    border:none;
+    display: block;
+}
+
+.overDropZone{
+    background-color: rgb(209, 207, 204);
+}
+
+.imageIcon{
+    width:10%;
+    height:10%;
+    object-fit: contain;
+    opacity: 0.1;
+    display: block;
+}
+
+.imageIcon img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.listPosition{
+    position: absolute;
+    top:100%;
+    left:100%;
+    transform: translate(-100%,-100%);
+    width:70%;
+    height:8%;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.listBox{
+    background-color: rgb(255, 255, 255);
+    width:10%;
+    height:100%;
+    display: inline-block;
+}
+
+.moveableBox{
+    position:absolute;
+    left:95%;
+    top:5%;
+    transform: translate(-95%,-5%);
+    width: 20%;
+    height:20%;
+    background-color: none;
+}
+
+.addPaddingBottom{
+    padding-bottom: 10px;
+}
+
+.redColour{
+    color:red;
+}
+
+.hugeBox{
+    background-color: gainsboro;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.besideImage{
+    background-color: rgb(255, 255, 255);
+    width:25%;
+    height:85%;
+    float:right;
+    padding-left:0px;
+}
+
+.shiftRight{
+    width:100%;
+    height:100%;
+    margin:0%;
+}
+
+.stepOne, .stepTwo, .stepThree, .stepFour{
+    display: visible;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.imageRelated{
+    width:90%;
+    height: 70%;
+}
+
+.brightness{
+    filter: brightness(100%);
+}
+
+.saturation{
+    filter: saturate(100%);
+}
+
+.increaseHeight{
+    height:80%;
+}
+
+.textType1{
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.increaseTopMargin{
+    margin-top: 30px;
+}
+
+.hidden{
+    display: none;
+}
+
+.textType2{
+    font-size: 14px;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.decreasePadding{
+    padding-bottom: 20px;
+}
+
+.slider{
+    width:100%;
+    height:10%;
+    border:1px solid rgb(216,195,164);
+    background-color: none;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sliderInput{
+    -webkit-appearance: none;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:90%;
+    height:8px;
+    border-radius: 4px;
+    border: none;
+    background: rgb(234, 232, 220);
+}
+
+.sliderInput::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:10px;
+    height:15px;
+    background: rgb(216,195,164);
+}
+
+.sliderLine{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border:4px solid rgb(234, 232, 220);
+    border-radius: 4px;
+    width: 90%;
+    background-color: rgb(234, 232, 220);
+    display: inline-block;
+}
+
+.slidingPoint{
+    position: absolute;
+    top:50%;
+    left:10%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(216,195,164);
+    width:10px;
+    height:15px;
+    display: inline-block;
+}
+
+.movingNext{
+    font-size: 18px;
+    font-weight: bold;
+    width:90%;
+    height: 20%;
+    position: relative;
+}
+
+.decreaseHeight{
+    height: 10%;
+}
+
+.addTopBorder{
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.textAbove{
+    width:100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+} 
+
+.displaySideBySide{
+    display: flex;
+    justify-content: space-between;
+}
+
+.button{
+    background-color: rgb(7,204,184);
+    width:100%;
+    height:50px;
+    border: none;
+    margin-top: 10px;
+    
+}
+
+.textDone{
+    color:rgb(234, 232, 220);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.goBack, .goNext{
+    width:48%;
+    display: inline-block;
+}
+
+.goBack{
+    background-color: rgb(232,90,80);
+}
+
+.arrow{
+    display: flex;
+    align-items: center;
+    margin-left:25%;
+}
+
+.line{
+    border: 2px solid rgb(234,232,220);
+    background-color:rgb(234,232,220);
+    width:168px;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.shorterArrow{
+    width:75px;
+}
+
+.arrowHead{
+    margin:-18px;
+    border: solid rgb(234,232,220);
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    border-radius: 3px;
+    width:15px;
+    height:15px;
+    transform: rotate(-45deg);
+}
+
+.turnArrow{
+    border-width: 4px 0px 0px 4px;
+    margin-left:-77px;
+}
+
+.smallerButtons{
+    width:100%;
+    height:30px;
+    border: 2px solid rgb(216,195,164);
+    background-color: white;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: rgb(216,195,164);
+    font-weight: bold;
+}
+
+.choiceButtonActive{
+    background-color: rgb(216,195,164);
+    color: white;
+}
+
+.buttonWidth{
+    width:48%;
+}
+
+.listButtons{
+    width:30%;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.listButton{
+    width:46%;
+    height:100%;
+    border: 1px solid rgb(232,90,80);
+    background-color: white;
+    color: rgb(232,90,80);
+    font-weight: bold;
+}
+
+
+
+.colourBox{
+    width:100%;
+    height:30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.colourBox2{
+    width:100%;
+    height: 70px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.colourBox3{
+    width:100%;
+    height:180px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.colourBoxes{
+    width:15%;
+    height:100%;
+    background-color: rgb(225, 241, 248);    
+    position: relative;
+
+}
+
+.colourBoxes2{
+    width:17%;
+    height:40%;
+    display: inline-block;
+    border:1px solid rgb(240, 240, 240);
+    position: relative;
+}
+
+.tickImg{
+    width:60%;
+    height:60%;
+    position: absolute;
+    top:50%;
+    left:80%;
+    transform: translate(-80%,-50%);    
+}
+
+.tickImg img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.height2{
+    height:42%;
+}
+
+.height3{
+    height:20%;
+}
+
+.heightDec{
+    height:80px;
+}
+
+.colourOption{
+    padding:5px 25px;
+    background: none;
+    border: 2px solid rgb(232,128,115);
+    color: rgb(232,128,115);
+    font-weight: bold;
+    font-size: 12px;
+    margin: -10px 0px 10px 0px;
+}
+
+.chosen{
+    background: rgb(232,128,115);  
+    color: white;
+    border:none;
+}
+
+.choiceTab{
+    margin-top: -15px;
+}
+
+.choiceRow{
+    width:100%;
+    list-style: none;
+    display: flex;
+    font-size: 12.5px;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+}
+
+.choiceNotActive{
+    color: rgb(232,128,115);
+}
+
+.choiceActive{
+    color: white;
+    background-color: rgb(232,128,115);
+}
+
+li{
+    width:30%;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid rgb(232,128,115);
+    /* padding:3px 7px; */
+    padding:7px 0px;
+}
+
+.itemsShow{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.itemBox{
+    background-color: darkgrey;
+    width:48%;
+    height:100px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.itemBox img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* making wesbite responsive*/
+
+@media only screen and (max-width:376px){
+    .mainMenu {
+        background-color:  rgb(209, 189, 158);
+        width:100%;
+        height:10%;
+        float:left;
+    }
+    .menuImage{
+        width:40px;
+        height:30px;
+        color:white;
+        float:right;
+        margin:25px 12px;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .menuLine{
+        width:100%;
+        height:15%;
+        background-color:rgb(234, 232, 220);
+        display: block;
+        border-radius: 1px;
+    }
+
+    .logoImage{
+        width:20%;
+        height:90%;
+        float:left;
+        /* border:1px solid black; */
+        margin: 10px;
+    }
+    
+    .box1{
+        display: none;
+    }
+
+    /* .menuBox{ 
+        display:block; 
+    }
+    
+    .insideBox{
+        display:visible;
+    } */
+
+    .links{
+        display: block;
+        font-size: 20px;
+        padding:30px;
+    }
+
+    .stepsMenu{
+        background-color: rgb(234, 232, 220);
+        width: 100%;
+        height: 10vh;
+        float: left;
+        position: relative;
+    }
+
+    .steps{
+        height:30%;
+        width:95%;
+    }
+
+    .steps .stepBox{
+        width:16%; 
+        height: 80%;        
+    }
+
+    .active{
+        background-color: rgb(232,90,80);
+        color: rgb(234, 232, 220);
+    }
+
+    .stepBox .text{
+        font-size: 9px;
+    }
+
+    .imageArea{
+        width:100%;
+        height:35vh;
+    }
+
+    .besideImage{
+        width:100%;
+        height:45%;
+        float:right;
+    }
+
+    .shiftRight{
+        width:100%;
+        height:100%;
+        margin-left: 20px;
+    }
+
+    .textType1{
+        font-size: 14px;
+    }
+
+    .movingNext{
+        margin-left: -20px;
+        width:100%;
+        height: 30%;
+        position: relative;
+        background-color: rgb(234, 232, 220);
+    }
+
+    .bottomMenu {
+        display: none;
+    }
+
+    .bottomMenu2{
+        background-color:  rgb(209, 189, 158);
+        width:100%;
+        height:25%;
+        float:left;
+        display: block;
+    }
+
+    .textAbove{
+        margin-left: 20px;
+        width: 90%;
+        height:90%;
+        background-color: rgb(234, 232, 220);
+    } 
+
+    .textAbove .arrow{
+        margin-left:24%;
+    }
+
+    .imageIcon{
+        display: none;
+    }
+
+    .dropPromt{
+        display: none;
+    }
+
+    .fileChoose{
+        display: none;
+    }
+
+    .phoneButton{
+        width:50%;
+        height:35px;
+        margin-bottom: 10px;
+        background-color: rgb(255, 255, 255);
+        border:1px solid rgb(209, 189, 158);
+        display: block;
+    }
+
+    .bottomMenu2 .box2{
+        width:50%;
+        height:20%;
+        margin:10% auto;
+        margin-left:20px;
+        font-size: 14px;
+    }
+    
+    .smallText{
+        font-size: 12px;   
+    }
+    
+    .box3{
+        width:50%;
+        margin:10% auto;
+        font-size: 14px;
+    }
+    
+
+
+}
+
+@media only screen and (max-width:1024px){
+    .stepBox{
+        width: 15%;
+        height: 70%;
+        border:3px solid  rgb(232,90,80);
+        background-color:  rgb(234, 232, 220);
+        display: inline-block;
+        position: relative;
+        color:  rgb(232,90,80);
+    }
+    
+    .active{
+        background-color: rgb(232,90,80);
+        color: rgb(234, 232, 220);
+    }
+    
+    .text{
+        font-weight: bold;
+        font-size:12px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+
+    .arrow{
+        display: flex;
+        align-items: center;
+        margin-left:12%;
+    }
+    
+    .choiceRow{
+        width:100%;
+        list-style: none;
+        display: flex;
+        font-size: 11px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        font-weight: bold;
+        /* margin-top:-10%; */
+    }
+
+    li{
+        text-align: center;
+        display: inline-block;
+        border: 1px solid rgb(232,128,115);
+        padding:5px 10px;
+        margin-right: 5%;
+        margin-top:5%;
+    }
+
+    .colourOption{
+        padding:5px 10px;
+        background: none;
+        border: 2px solid rgb(232,128,115);
+        color: rgb(232,128,115);
+        font-weight: bold;
+        font-size: 11px;
+        margin: -10px 0px 10px 0px;
+    }
+
+    .chosen{
+        background: rgb(232,128,115);  
+        color: white;
+        border:none;
+    }
+    
+    .box2{
+        width:75%;
+        height:40%;
+        margin:30% auto;
+        font-size: 16px;
+        color:  rgb(234,232,220);
+    }
+    
+    .smallText{
+        font-size: 12px;   
+    }
+}
+
+
+
+
+

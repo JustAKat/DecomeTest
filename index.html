@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Decome: Design your space right</title>
+        <meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="style.css">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    </head>
+    <body>
+        <div class="container">
+            <div class="mainMenu">
+                <div class="logoImage">
+                        <img src="images/logo.png"></img>
+                </div>
+               
+                <div class="menuImage">
+                    <span class="menuLine"></span>
+                    <span class="menuLine"></span>
+                    <span class="menuLine"></span>
+                </div>
+
+                <div class="box1">
+                    <a class="links">HOME</a>
+                    <a class="links">TUTORIAL</a>
+                    <p id="seperatingLine"></p>
+                    <a class="links">LOG IN</a>
+                    <a class="links">SIGN UP</a>
+                </div> 
+
+                <div class="menuBox hidden">
+                    <div class="insideBox hidden">
+                        <a class="links">HOME</a>
+                        <a class="links">TUTORIAL</a>
+                        <a class="links">LOG IN</a>
+                        <a class="links">SIGN UP</a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="bottomMenu">
+                <div class="box2">
+                    <p>CONTACT DETAILS</p>
+                    <p class="smallText">Phone:</p>
+                    <p class="smallText">+65 1234 5678</p>
+                    <p class="smallText">Email:</p>
+                    <p class="smallText">decome@gmail.com</p>
+                </div>
+
+                <div class="box3">
+                    <p>SOCIAL MEDIA</p>
+                    <div class="socialMedia">
+                        <div class="imgContain">
+                            <img src="images/insta.png"></img>
+                        </div>
+                        <div class="imgContain">
+                            <img src="images/facebook.png"></img>
+                        </div>
+                        <div class="imgContain">
+                            <img src="images/linkedIn.png"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="stepsMenu">
+                <p><i class="dotLine"></i></p>
+                    <div class="steps">
+                        <div id="step1" class="stepBox active"><p class="text">Step 1</p></div>
+                        <div id="step2" class="stepBox"><p class="text">Step 2</p></div>
+                        <div id="step3" class="stepBox"><p class="text">Step 3</p></div>
+                        <div id="step4" class="stepBox"><p class="text">Step 4</p></div>
+                    </div>
+            </div> 
+    
+             <div class="imageArea">
+               <div class="imageHere">
+                   <div class="putImageHere">
+                    <canvas id="canvas" hidden></canvas>
+                       <div class="imageIcon">
+                            <img src="images/camera.png"></img>
+                        </div>
+                       <span class="dropPromt">Drop image here or click to upload image</span>
+                       <button class="fileChoose"> Choose File </button>
+                       
+                       <!-- for phone display only-->
+                       <button class="phoneButton">Choose from gallary</button>
+                       <button class="phoneButton">Take photo</button>
+
+                       <input type="file" class="fileInput" hidden>
+                       
+                   </div>
+                                    
+                    <div class="listPosition"></div>
+
+                    <div class="moveableBox hidden">
+                        <span class="hugeBox"></span>
+                    </div>
+               </div>
+            </div>
+            
+            <div class="besideImage">
+                <div class="shiftRight">
+                    <div class="stepOne">
+                        <div class="imageRelated">
+                            <p class="textType1">Upload an image by dropping it here or choosing from file</p>
+                         </div>
+         
+                         <div class="movingNext">
+                             <div class="textAbove">
+                                 <p >Adjust picture </p>
+                                 <button id="stepOneBtn" class="button"><p class="arrow"><i class="line"></i><i class="arrowHead"></i></p></button>
+                             </div>                    
+                         </div>
+                    </div>
+                    
+                    <div class="stepTwo hidden">
+                        <div class="imageRelated">
+                            <p class="textType1">Adjust the image to the closest to how it looks in real life</p>
+                            <p class="textType2">Brightness</p>
+                            <div class="slider">
+                                <input type="range" min="100" max="200" class="sliderInput" id="sliderOne" value="5" steps="1">
+                            </div>
+                            <p class="textType2">Saturation</p>
+                            <div class="slider">
+                                <input type="range" min="100" max="200" class="sliderInput" id="sliderTwo" value="5" steps="1">
+                            </div>
+                        </div>
+                        
+                        <div class="movingNext">
+                            <div class="textAbove">
+                                <p >Get colour suggestions </p>
+                                <div class="displaySideBySide">
+                                    <button id="stepTwoBackBtn" class="button goBack"><p class="arrow"><i class="line shorterArrow"></i><i class="arrowHead turnArrow"></i></p></button>
+                                    <button id="stepTwoNextBtn" class="button goNext"><p class="arrow"><i class="line shorterArrow"></i><i class="arrowHead"></i></p></button>
+                                </div>
+                            </div>                    
+                        </div>
+    
+                    </div>
+    
+                    <div class="stepThree hidden">
+                        <div class="imageRelated move">
+                            <div class="displaySideBySide">
+                                <button class="smallerButtons buttonWidth choiceButtonActive">ALL</button>
+                                <button class="smallerButtons buttonWidth">CHOOSE SOME</button>
+                            </div>
+                            <p class="smallText addPaddingBottom redColour">the top filtering option are not working currently</p>
+                            <p class="smallText addPaddingBottom">Click on colour you like followed by plus button to add to list. 
+                                Similarly click on colour(not on list on image, below this section only) you want to remove followed by minus button.
+                                You can also move the big box on image around to see how the colour will look in the space</p>
+                            <div class="displaySideBySide">
+                                <p class="textType2">Add selected colours to list</p>
+                                <div class="listButtons">
+                                    <button id="plus" class="listButton">+</button>
+                                    <button id="minus" class="listButton">-</button>
+                                </div>
+                                
+                            </div>
+    
+                            <p class="textType1 decreasePadding">Colours generated from the image</p>
+                            <div class="displaySideBySide colourBox">
+                                <span id="colourOne" class="colourBoxes"></span>
+                                <span id="colourTwo" class="colourBoxes"></span>
+                                <span id="colourThree" class="colourBoxes"></span>
+                                <span id="colourFour" class="colourBoxes"></span>
+                                <span id="colourFive" class="colourBoxes"></span>
+                                <span id="colourSix" class="colourBoxes"></span>
+                            </div>
+    
+                            <div id="colourSuggestions" class="hidden">
+                                <p class="textType1 decreasePadding">Colours that might go well with your space</p>
+                                <div class="displaySideBySide">
+                                    <button id="all" class="colourOption chosen">ALL</button>
+                                    <button id="matching" class="colourOption">Matching</button>
+                                    <button id="contrasting" class="colourOption">Contrasting</button>
+                                </div>
+    
+                                <div class="matchingDiv">
+                                    <p class="textType2">Matching</p>
+                                    <div class="colourBox2 displaySideBySide"></div>
+                                </div>
+                                
+                                <div class="contrastingDiv">
+                                    <p class="textType2">Contrasting</p>
+                                    <div class="colourBox3 displaySideBySide"></div>
+                                </div>
+                                
+                            </div>
+                            
+                        
+                            
+                        </div>
+    
+                        <div class="movingNext addTopBorder">
+                            <div class="textAbove">
+                                <p >Get items suggestions based on your colour list</p>
+                                <div class="displaySideBySide">
+                                    <button id="stepThreeBackBtn" class="button goBack"><p class="arrow"><i class="line shorterArrow"></i><i class="arrowHead turnArrow"></i></p></button>
+                                    <button id="stepThreeNextBtn" class="button goNext"><p class="arrow"><i class="line shorterArrow"></i><i class="arrowHead"></i></p></button>
+                                </div>
+                            </div>                    
+                        </div>
+                    </div>
+                    
+                    <div class="stepFour hidden">
+                        <div class="imageRelated increaseHeight move">
+                            <div class="displaySideBySide">
+                                <button class="smallerButtons buttonWidth choiceButtonActive">ALL</button>
+                                <button class="smallerButtons buttonWidth">CHOOSE SOME</button>
+                            </div>
+                            <p class="smallText addPaddingBottom redColour">the top filtering option, removing items from this list, and bottom filtering options are all not working currently</p>
+                            <!-- <p class="smallText addPaddingBottom">Click on colour you like followed by plus button to add to list. Similarly click on colour(not on list on image, below this section only) you want to remove followed by minus button.</p> -->
+                            <div class="displaySideBySide">
+                                <p class="textType2">Remove colours from list</p>
+                                <div class="listButtons">
+                                    <button id="minusTwo" class="listButton shiftRight">-</button>
+                                </div>
+                                
+                            </div>
+    
+                            <p class="textType1 decreasePadding">Colours you choose</p>
+                            <div class="displaySideBySide colourBox2 heightDec">
+                                <span id="selected1" class="colourBoxes2"></span>
+                                <span id="selected2"class="colourBoxes2"></span>
+                                <span id="selected3"class="colourBoxes2"></span>
+                                <span id="selected4"class="colourBoxes2"></span>
+                                <span id="selected5"class="colourBoxes2"></span>
+                                <span id="selected6"class="colourBoxes2"></span>
+                                <span id="selected7"class="colourBoxes2"></span>
+                                <span id="selected8"class="colourBoxes2"></span>
+                                <span id="selected9"class="colourBoxes2"></span>
+                                <span id="selected10" class="colourBoxes2"></span>
+                            </div>
+    
+                            <p class="textType1 increaseTopMargin">Some item suggestions for you</p>
+                            <div class="choiceTab">
+                                <nav>
+                                    <ul class="choiceRow">
+                                        <li class="choiceItem choiceActive"><span href="" class="choiceActive">ALL ITEMS</span></li>
+                                        <li class="choiceItem"><span href="" class="choiceNotActive">DECORATING</span></li>
+                                        <li class="choiceItem"><span href="" class="choiceNotActive">FURNITURE</span></li>
+                                    </ul>
+                                </nav>                            
+                            </div>
+    
+                            <div class="itemsShow">
+                                
+                            </div>
+                        </div>
+    
+                        <div class="movingNext decreaseHeight addTopBorder">
+                            <div class="textAbove">
+                                <div class="displaySideBySide">
+                                    <button id="stepFourBackBtn" class="button goBack"><p class="arrow"><i class="line shorterArrow"></i><i class="arrowHead turnArrow"></i></p></button>
+                                    <button id="completedBtn" class="button goNext"><p class="textDone">Done</p></button>
+                                </div>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottomMenu2">
+                <div class="displaySideBySide">
+                    <div class="box2">
+                        <p>CONTACT DETAILS</p>
+                        <p class="smallText">Phone:</p>
+                        <p class="smallText">+65 1234 5678</p>
+                        <p class="smallText">Email:</p>
+                        <p class="smallText">decome@gmail.com</p>
+                    </div>
+    
+                    <div class="box3">
+                        <p>SOCIAL MEDIA</p>
+                        <div class="socialMedia">
+                            <div class="imgContain">
+                                <img src="images/insta.png"></img>
+                            </div>
+                            <div class="imgContain">
+                                <img src="images/facebook.png"></img>
+                            </div>
+                            <div class="imgContain">
+                                <img src="images/linkedIn.png"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            
+        </div>
+        <!-- <span class="itemBox"></span>
+                            <span class="itemBox"></span>
+                            <span class="itemBox"></span>
+                            <span class="itemBox"></span> -->
+        <!-- <script type="text/javascript" src="Kmeans.js"></script> -->
+        <script type="text/javascript" src="items.js"></script>
+        <script type="text/javascript" src="code.js"></script>
+        
+    </body>
+</html>
